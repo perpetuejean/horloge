@@ -1,95 +1,114 @@
-
-  /* STYLE GLOBAL */
-body {
+/* --- BASE GLOBAL --- */
+* {
   margin: 0;
   padding: 0;
-  font-family: 'Segoe UI', Tahoma, sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #4e54c8, #8f94fb);
   color: white;
-  background: linear-gradient(120deg, #4e54c8, #8f94fb);
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   height: 100vh;
-  transition: background 0.6s ease;
+  transition: background 0.5s ease;
 }
 
-/* CONTAINER PRINCIPAL */
+/* --- CONTAINER PRINCIPAL --- */
 .container {
-  text-align: center;
   background: rgba(255, 255, 255, 0.1);
-  padding: 40px;
-  border-radius: 20px;
-  backdrop-filter: blur(10px);
-  box-shadow: 0 8px 16px rgba(0,0,0,0.3);
-  max-width: 90%;
-  width: 500px;
+  padding: 2rem;
+  border-radius: 1.5rem;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  max-width: 95%;
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
 }
 
-/* TITRE */
+/* --- TITRES --- */
 h1 {
-  font-size: 2.8rem;
-  margin-bottom: 20px;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.3);
 }
 
-/* HORLOGE */
+h2 {
+  font-size: 1.4rem;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+/* --- HORLOGE --- */
 #clock {
-  font-size: 4rem;
+  font-size: 3.5rem;
   font-weight: bold;
-  margin: 20px 0;
-  animation: pulse 1.5s infinite ease-in-out;
+  padding: 1rem;
+  margin-bottom: 1.2rem;
+  border-radius: 1rem;
+  background: rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 0 10px rgba(0,0,0,0.1);
+  animation: fadeIn 1s ease-in-out;
 }
 
-/* BOUTON */
+/* --- BOUTON --- */
 button {
-  padding: 10px 25px;
-  font-size: 1rem;
-  border: none;
-  border-radius: 8px;
   background-color: #ffffff;
   color: #333;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 1rem;
   cursor: pointer;
+  font-size: 1rem;
   transition: all 0.3s ease;
-  margin-top: 10px;
 }
 
 button:hover {
-  background-color: #ddd;
+  background-color: #f0f0f0;
   transform: scale(1.05);
 }
 
-/* INFO SECTION */
+/* --- INFOS --- */
 .info {
-  margin-top: 30px;
   font-size: 1rem;
   line-height: 1.6;
+  margin-top: 1.5rem;
+  color: #eaeaea;
 }
 
-/* FOOTER */
+/* --- FOOTER --- */
 footer {
-  margin-top: 30px;
+  margin-top: 2rem;
   font-size: 0.8rem;
   opacity: 0.6;
 }
 
-/* ANIMASYON */
-@keyframes pulse {
-  0% { transform: scale(1); opacity: 1; }
-  50% { transform: scale(1.05); opacity: 0.9; }
-  100% { transform: scale(1); opacity: 1; }
+/* --- ANIMASYON --- */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
-/* RESPONSIVE DESIGN */
-@media (max-width: 500px) {
-  #clock {
-    font-size: 3rem;
-  }
-
+/* --- RESPONSIVE DESIGN --- */
+@media (max-width: 480px) {
   h1 {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 
-  .container {
-    padding: 20px;
+  #clock {
+    font-size: 2.5rem;
+    padding: 0.8rem;
+  }
+
+  button {
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  .info {
+    font-size: 0.9rem;
   }
 }
