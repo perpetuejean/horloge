@@ -1,20 +1,35 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mon Blog</title>
-      <link rel="stylesheet" href="style.css" />
-
-
-    <script src="java.js" defer></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>🕒 Horloge Dynamique</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="java.js" defer></script>
+  <meta name="description" content="Mini blog avec une horloge dynamique en temps réel et un style moderne.">
 </head>
 <body id="body">
+  <main class="container">
+    <header>
+      <h1>🕒 Horloge en Temps Réel</h1>
+    </header>
 
-    <h1>Horloge en temps reel</h1>
-    
-    <p id="clock"></p>
+    <section class="clock-section" aria-label="Horloge en temps réel">
+      <p id="clock">Chargement...</p>
+      <button id="changeBgBtn" aria-label="Changer le fond">Changer le fond</button>
+    </section>
 
-    
+    <section class="info">
+      <h2>Bienvenue sur mon mini blog !</h2>
+      <p>
+        Ce projet affiche une horloge dynamique avec un style moderne.<br />
+        Clique sur le bouton pour changer le fond et personnaliser ton expérience.
+      </p>
+    </section>
+
+    <footer>
+      <p style="font-size: 0.8rem; opacity: 0.6;">&copy; 2025 - Petoue's Project</p>
+    </footer>
+  </main>
 </body>
 </html>
