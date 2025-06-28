@@ -1,29 +1,95 @@
 
-  body {
-    background: linear-gradient(to right, #ed59be, #f9b1e2);
-    color: white;
-    font-family: 'Segoe UI', sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    margin: 0;
+  /* STYLE GLOBAL */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  color: white;
+  background: linear-gradient(120deg, #4e54c8, #8f94fb);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  transition: background 0.6s ease;
+}
+
+/* CONTAINER PRINCIPAL */
+.container {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 40px;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+  max-width: 90%;
+  width: 500px;
+}
+
+/* TITRE */
+h1 {
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+/* HORLOGE */
+#clock {
+  font-size: 4rem;
+  font-weight: bold;
+  margin: 20px 0;
+  animation: pulse 1.5s infinite ease-in-out;
+}
+
+/* BOUTON */
+button {
+  padding: 10px 25px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #ffffff;
+  color: #333;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #ddd;
+  transform: scale(1.05);
+}
+
+/* INFO SECTION */
+.info {
+  margin-top: 30px;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* FOOTER */
+footer {
+  margin-top: 30px;
+  font-size: 0.8rem;
+  opacity: 0.6;
+}
+
+/* ANIMASYON */
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.05); opacity: 0.9; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 500px) {
+  #clock {
+    font-size: 3rem;
   }
 
   h1 {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
-    letter-spacing: 2px;
+    font-size: 2rem;
   }
 
-  #clock {
-    font-size: 4rem;
-    font-weight: bold;
-    letter-spacing: 4px;
-    background-color: rgba(255, 255, 255, 0.1);
-    padding: 20px 40px;
-    border-radius: 10px;
-    box-shadow: 0 0 20px rgba(255,255,255,0.2);
+  .container {
+    padding: 20px;
   }
-
+}
